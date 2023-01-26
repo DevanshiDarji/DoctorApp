@@ -1,0 +1,8 @@
+#RewriteBase /
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l 
+RewriteCond $1 !^(index\.php|public|robots\.txt)
+RewriteCond $1 !^(index\.php|uploads|public|robots\.txt) 
+RewriteRule ^(.*)$ index.php
